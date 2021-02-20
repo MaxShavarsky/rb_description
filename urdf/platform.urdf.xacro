@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="base_platform" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="prefix" value="base_platform_"/>
+
+    <xacro:include filename="$(find rb_description)/urdf/macros.xacro"/>
+
+    <link name="${prefix}base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://rb_description/meshes/platform.stl"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://rb_description/meshes/platform.stl"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+</robot>
+

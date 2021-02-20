@@ -1,19 +1,18 @@
 <?xml version="1.0"?>
-<package>
-  <name>aubo_description</name>
-  <version>1.3.3</version>
-  <description>The aubo_description package</description>
-  <author email="liug@our-robotics.com">Allen Liu</author>
-  <maintainer email="liug@our-robotics.com">Allen Liu</maintainer>
-  <url type="website">http://wiki.ros.org/aubo_description</url>
-  <license>BSD</license>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rb_description</name>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>urdf</run_depend>
+  <version>0.0.1</version>
+  <description>robot barmen description</description>
+  <maintainer email="max@getsomatic.com">max</maintainer>
+  <license>TODO: License declaration</license>
 
-  <!-- The export tag contains other, unspecified, tags -->
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
   <export>
-    <!-- Other tools can request additional information be placed here -->
-    <rviz plugin="${prefix}/plugin_description.xml"/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
+
