@@ -5,10 +5,6 @@
 <!-- =================================================================================== -->
 
 <robot  name="aubo_i5" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find aubo_description)/urdf/aubo.transmission.xacro" />
-  <xacro:include filename="$(find aubo_description)/urdf/aubo.gazebo.xacro" />
-  <xacro:include filename="$(find your_robot_description)/urdf/materials.xacro" />
-
   <link name="base_link">
     <inertial>
       <origin xyz="-1.4795E-13 0.0015384 0.020951" rpy="0 0 0" />
@@ -18,7 +14,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/base_link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/base_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -27,7 +23,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/base_link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -41,7 +37,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/shoulder_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/shoulder_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -50,7 +46,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/shoulder_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/shoulder_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -72,7 +68,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/upperArm_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/upperArm_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -81,7 +77,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/upperArm_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/upperArm_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -103,7 +99,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/foreArm_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/foreArm_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -112,7 +108,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/foreArm_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/foreArm_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -134,7 +130,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/wrist1_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist1_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -143,7 +139,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/wrist1_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist1_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -165,7 +161,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/wrist2_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist2_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -174,7 +170,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/wrist2_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist2_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -196,7 +192,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/visual/wrist3_Link.DAE" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist3_Link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -205,7 +201,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://aubo_description/meshes/aubo_i5/collision/wrist3_Link.STL" />
+        <mesh filename="package://rb_description/meshes/aubo_i5/collision/wrist3_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -218,12 +214,5 @@
     <limit lower="-3.05" upper="3.05" effort="0" velocity="0" />
   </joint>
 
-  <link name="world" />
-
-  <joint name="world_joint" type="fixed">
-    <parent link="world" />
-    <child link = "base_link" />
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-  </joint>
 
 </robot>
