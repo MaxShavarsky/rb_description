@@ -8,10 +8,19 @@
 
   <!-- Moving platform -->
   <xacro:include filename="$(find rb_description)/urdf/platform.urdf.xacro"/>
-  <joint name="manipulator_joint" type="fixed">
+  <joint name="robot_base_joint" type="fixed">
     <parent link="robot_barmen_base_link"/>
     <child link="base_link"/>
     <origin xyz="0.25 0.0 0.458" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Gripper -->
+  <xacro:include filename="$(find rb_description)/urdf/gripper.urdf.xacro"/>
+  <joint name="manipulator_joint" type="fixed">
+    <parent link="wrist3_Link"/>
+    <child link="robot_barmen_gripper_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
 </robot>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="gripper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <link name="robot_barmen_gripper_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://rb_description/meshes/gripper.stl"/>
+            </geometry>
+            <origin xyz="-0.0025 0.0 0.16" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://rb_description/meshes/gripper.stl"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+</robot>
+
